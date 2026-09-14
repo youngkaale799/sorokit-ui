@@ -10,8 +10,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --minify --clean",
-    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "build": "node api.js && tsup src/index.ts --format cjs,esm --dts --minify --clean",
+    "dev": "node api.js && tsup src/index.ts --format cjs,esm --watch --dts",
     "lint": "tsc --noEmit",
     "test": "vitest --passWithNoTests"
   },
